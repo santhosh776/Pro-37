@@ -7,7 +7,7 @@ class Contestant {
 
   getCount(){
     var contestantCountRef = database.ref('contestantCount');
-    contestantCountRef.on("value",(data)=>{
+    contestantCountRef.on("value",function(data){
       contestantCount = data.val();
     })
   }
@@ -26,7 +26,7 @@ class Contestant {
     });
   }
 
-  static getPlayerInfo(){
+  static getContestantInfo(){
     var contestantInfoRef = database.ref('contestants');
     contestantInfoRef.on("value",(data)=>{
       allContestants = data.val();
