@@ -34,10 +34,11 @@ class Quiz {
     //write code to change the background color here
     background("yellow")
     //write code to show a heading for showing the result of Quiz
-    this.title2.html("Result of the Quiz");
-    this.title2.position(350, 0);
+    title2 = createElement('h1')
+    title2.html("Result of the Quiz");
+    title2.position(350, 0);
     //call getContestantInfo( ) here
-    Contestant.getContestantInfo()
+    Contestant.getPlayerInfo()
 
     //write condition to check if contestantInfor is not undefined
     if(allContestants !== undefined)
